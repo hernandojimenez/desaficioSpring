@@ -3,12 +3,12 @@ package com.desafiospring.meli.dtos;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
+import org.springframework.http.HttpStatus;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DataProductDTO {
-    private List<ProductDTO> data;
+public class StatusCodeDTO {
+    private int code;
+    private String message;
 }

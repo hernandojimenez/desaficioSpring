@@ -9,6 +9,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DataProductDTO {
-    private List<ProductDTO> data;
+public class ClientPurchaseDTO {
+    private Integer clientId;
+    private List<ArticleDTO> articles;
 }

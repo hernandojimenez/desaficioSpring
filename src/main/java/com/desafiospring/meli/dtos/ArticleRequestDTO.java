@@ -9,6 +9,6 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DataProductDTO {
-    private List<ProductDTO> data;
+public class ArticleRequestDTO {
+    private List<ArticleDTO> articles;
 }

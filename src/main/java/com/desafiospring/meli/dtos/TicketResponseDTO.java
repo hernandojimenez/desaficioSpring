@@ -4,11 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DataProductDTO {
-    private List<ProductDTO> data;
+public class TicketResponseDTO {
+    private TicketDTO ticket;
+    private StatusCodeDTO statusCode;
 }
