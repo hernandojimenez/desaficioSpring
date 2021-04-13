@@ -43,8 +43,8 @@ public class ArticleServiceImpl implements ArticleService{
             }if(request.getQuantity() !=null && cont<2){
                 dataProduct = articleRepository.getArticleByQuantity(Integer.parseInt(request.getQuantity()),dataProduct);
                 cont++;
-            }if(request.getFreeShipping()!=null && cont<2){
-                dataProduct = articleRepository.getArticleByFreeShipping(request.getFreeShipping().equals("SI")?true:false,dataProduct);
+            }if(request.getFreeShipping() !=null && cont<2){
+                dataProduct = articleRepository.getArticleByFreeShipping(request.getFreeShipping().equals("true")?"SI":"NO",dataProduct);
                 cont++;
             }if(request.getPrestige() !=null && cont<2){
                 dataProduct = articleRepository.getArticleByPrestige(request.getPrestige(),dataProduct);

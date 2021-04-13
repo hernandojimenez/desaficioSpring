@@ -15,7 +15,7 @@ public interface ArticleRepository {
     List<ProductDTO> getArticleByBrand(String brand, List<ProductDTO> products) throws ArticleNotFounException;
     List<ProductDTO> getArticleByPrice(float price, List<ProductDTO> products) throws ArticleNotFounException;
     List<ProductDTO> getArticleByQuantity(int quantity, List<ProductDTO> products) throws ArticleNotFounException;
-    List<ProductDTO> getArticleByFreeShipping(Boolean freeShipping,List<ProductDTO> products) throws ArticleNotFounException;
+    List<ProductDTO> getArticleByFreeShipping(String freeShipping,List<ProductDTO> products) throws ArticleNotFounException;
     List<ProductDTO> getArticleByPrestige(String prestige, List<ProductDTO> products) throws ArticleNotFounException;
     List<ProductDTO> orderArticles(List<ProductDTO> products, int order) throws ArticleOrderException;
     List<TicketResponseDTO> createRequestPurchase(ArticleRequestDTO articleRequestDTO) throws IOException, ArticleNotFounException, ArticleInsuficientException;

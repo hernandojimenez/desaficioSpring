@@ -29,7 +29,7 @@ public class ArticleController {
                                                                @RequestParam(required = false) String brand,
                                                                @RequestParam(required = false) String price,
                                                                @RequestParam(required = false) String quantity,
-                                                               @RequestParam(required = false, defaultValue = "") String freeShipping,
+                                                               @RequestParam(required = false) String freeShipping,
                                                                @RequestParam(required = false) String prestige,
                                                                @RequestParam(required = false) String order) throws ArticleOrderException, ArticleNotFounException, FilterPermittedException {
         List<ProductDTO> products = new ArrayList<>();
@@ -37,7 +37,7 @@ public class ArticleController {
         ProductRequestDTO request = new ProductRequestDTO(name,category,brand,price,quantity,freeShipping,prestige,order);
         products = articleService.listFilter(request);
         productsData.setData(products);
-        return new ResponseEntity(articleService.listFilter(request), HttpStatus.OK);
+        return new ResponseEntity(products, HttpStatus.OK);
     }
     //Solicitud de compra de uno o varios articulos y devolver el total de sus compras
     @PostMapping("/purchase-request")

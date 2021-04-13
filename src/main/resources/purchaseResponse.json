@@ -1,0 +1,27 @@
+[
+  {
+    "ticket": {
+      "id": 16,
+      "articles": [
+        {
+          "productId": 1,
+          "name": "Desmalezadora",
+          "brand": "Makita",
+          "quantity": 1
+        },
+        {
+          "productId": 5,
+          "name": "Zapatillas Deportivas",
+          "brand": "Nike",
+          "quantity": 2
+        }
+      ],
+      "total": 536.00006,
+      "clientId": 0
+    },
+    "statusCode": {
+      "code": 200,
+      "message": "Compra exitosa !!!"
+    }
+  }
+]

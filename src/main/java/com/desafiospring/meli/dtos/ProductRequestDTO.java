@@ -22,7 +22,7 @@ public class ProductRequestDTO {
         this.brand = brand;
         this.price = price;
         this.quantity = quantity;
-        this.freeShipping = freeShipping.equals("true")?"SI":"NO";
+        this.freeShipping = freeShipping;
         this.prestige = prestige;
         this.order = order;
     }

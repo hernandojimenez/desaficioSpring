@@ -85,7 +85,7 @@ public class ArticleRepositoryImpl implements ArticleRepository{
     }
     //Filtra articulos si el envio es o no gratis
     @Override
-    public List<ProductDTO> getArticleByFreeShipping(Boolean freeShipping, List<ProductDTO> products) throws ArticleNotFounException {
+    public List<ProductDTO> getArticleByFreeShipping(String freeShipping, List<ProductDTO> products) throws ArticleNotFounException {
         List<ProductDTO> listArticle = new ArrayList<>();
         if (products != null) {
             listArticle = products.stream()
@@ -121,7 +121,7 @@ public class ArticleRepositoryImpl implements ArticleRepository{
 
     //Crear solicitud de compra, si el articulo se encuentra en el stock y la cantidad es mayor o igual a la solicitada
     @Override
-    public List<TicketResponseDTO> createRequestPurchase(ArticleRequestDTO articleRequestDTO) throws IOException, ArticleNotFounException, ArticleInsuficientException {
+    public List<TicketResponseDTO> createRequestPurchase(ArticleRequestDTO articleRequestDTO) throws IOException, ArticleNotFounException {
         float total=0;
         int ticketId=0;
         float valor=0;
